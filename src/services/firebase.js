@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
+
 import {
     getAuth,
     GoogleAuthProvider,
@@ -8,15 +9,16 @@ import {
     signInWithPhoneNumber
 } from "firebase/auth";
 
+
 // TODO: Replace with your actual Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyDUvx1BSX7N_fcfC5je2BkSSk_YobJ-EHU",
-    authDomain: "mywebsite-2b31e.firebaseapp.com",
-    projectId: "mywebsite-2b31e",
-    storageBucket: "mywebsite-2b31e.firebasestorage.app",
-    messagingSenderId: "1031162418115",
-    appId: "1:1031162418115:web:861e94f103ba7228bce376",
-    measurementId: "G-4DNZ60GZ9W"
+    apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+    authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+    projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+    storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+    appId: import.meta.env.VITE_FIREBASE_APP_ID,
+    measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
 
 const app = initializeApp(firebaseConfig);
