@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { fetchCourses } from '@/services/api';
 import { CourseCard } from '@/components/features/CourseCard';
 import { Loader2 } from 'lucide-react';
+import SEO from '@/components/layout/SEO';
 
 const Courses = () => {
     const [courses, setCourses] = useState([]);
@@ -40,6 +41,10 @@ const Courses = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-4 py-12">
+            <SEO
+                title="All Courses"
+                description="Browse our comprehensive list of courses and start your journey today."
+            />
             <h1 className="text-3xl font-bold mb-8">Our Courses</h1>
 
             {courses.length === 0 ? (

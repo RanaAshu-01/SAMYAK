@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, BookOpen, Users, Trophy, Loader2 } from "lucide-react";
 import { fetchCourses } from "@/services/api";
 import { CourseCard } from "@/components/features/CourseCard";
+import SEO from "@/components/layout/SEO";
 
 const Home = () => {
     const [featuredCourses, setFeaturedCourses] = useState([]);
@@ -28,6 +29,10 @@ const Home = () => {
 
     return (
         <div className="flex flex-col min-h-screen">
+            <SEO
+                title="Home"
+                description="Join Samyak Institute for premier education in technology and business."
+            />
             {/* Hero Section */}
             <section className="bg-slate-900 text-white py-20 px-4 sm:px-6 lg:px-8">
                 <div className="max-w-7xl mx-auto text-center space-y-8">
